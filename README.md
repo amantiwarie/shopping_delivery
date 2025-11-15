@@ -1,149 +1,99 @@
-🛒 Grocery Delivery App
+# 🛒 Grocery Delivery App
 
-A full-stack Grocery Delivery Application that allows users to browse products, add items to their cart, manage orders, and track deliveries in real-time. Built with a scalable backend and a clean, intuitive UI to provide a smooth shopping experience.
+A full-stack Grocery Delivery Application that enables users to browse products, manage carts, place orders, and track delivery status. Built with a scalable backend architecture and clean UI for a seamless grocery shopping experience.
 
-🚀 Features
-User Features
+---
 
-User authentication & authorization (JWT)
+## 🚀 Features
 
-Browse grocery categories and products
+### User Features
+- User registration & login (JWT)
+- Browse grocery products & categories
+- Add/remove items from cart
+- Place orders with address support
+- Order status tracking (Pending → Packed → Out for Delivery → Delivered)
+- View previous orders
 
-Add/remove items from cart
+### Admin Features
+- Manage products (Add/Update/Delete)
+- Manage categories
+- Update order status
+- Manage delivery personnel
 
-Place orders with address selection
+### System Features
+- REST API based backend
+- Role-Based Access Control (User/Admin)
+- Input validation & global exception handling
+- Scalable layered architecture
 
-Order tracking (Pending → Packed → Out for Delivery → Delivered)
+---
 
-View past orders & invoices
+## 🏗️ Tech Stack
 
-Admin Features
+### Backend
+- Java  
+- Spring Boot  
+- Hibernate  
+- Spring Data JPA  
+- REST APIs  
 
-Manage products (CRUD)
+### Database
+- PostgreSQL / MySQL  
 
-Manage categories
+### Cloud / Deployment
+- AWS EC2  
 
-View and update order statuses
+### Tools
+- Git  
+- GitHub  
+- Postman  
 
-Manage delivery partners
+---
 
-System Features
+## 📁 Project Structure (Example)
 
-REST API architecture
-
-Secure backend with validation & exception handling
-
-Role-based access control
-
-Smooth & responsive UI
-
-🏗️ Tech Stack
-Backend
-
-Java
-
-Spring Boot
-
-Spring Data JPA
-
-Hibernate
-
-REST APIs
-
-Database
-
-PostgreSQL / MySQL
-
-Frontend (optional depending on your stack)
-
-React / HTML / CSS / JavaScript
-
-Cloud & DevOps
-
-AWS EC2 (deployment)
-
-Git & GitHub version control
-
-Postman (API testing)
-
-📁 Project Structure (Example)
 grocery-delivery-app/
 │
 ├── backend/
-│   ├── src/main/java/com/grocery/...
-│   ├── src/main/resources/application.properties
-│   └── pom.xml
+│ ├── src/main/java/com/grocery/...
+│ ├── src/main/resources/application.properties
+│ └── pom.xml
 │
 ├── frontend/
-│   ├── public/
-│   └── src/components/
+│ ├── public/
+│ └── src/components/
 │
 └── README.md
 
-🔧 API Endpoints (Sample)
-User APIs
-Method	Endpoint	Description
-POST	/auth/register	Register new user
-POST	/auth/login	Login user
-GET	/products	Get all products
-POST	/cart/add	Add product to cart
-POST	/order/place	Place order
-Admin APIs
-Method	Endpoint	Description
-POST	/admin/product	Add new product
-PUT	/admin/order/{id}	Update order status
-⚙️ Installation
-1. Clone the Repository
+
+
+---
+
+## 🔧 API Endpoints (Sample)
+
+### User APIs
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST   | /auth/register | Register user |
+| POST   | /auth/login    | Login user |
+| GET    | /products      | List all products |
+| POST   | /cart/add      | Add to cart |
+| POST   | /order/place   | Place order |
+
+### Admin APIs
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST   | /admin/product     | Add product |
+| PUT    | /admin/product/{id}| Update product |
+| PUT    | /admin/order/{id}  | Update order status |
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repo
+```bash
 git clone https://github.com/your-username/grocery-delivery-app.git
 cd grocery-delivery-app
 
-2. Backend Setup
-cd backend
-mvn clean install
 
-
-Update your application.properties:
-
-spring.datasource.url=jdbc:postgresql://localhost:5432/grocerydb
-spring.datasource.username=postgres
-spring.datasource.password=yourpassword
-spring.jpa.hibernate.ddl-auto=update
-
-
-Run backend:
-
-mvn spring-boot:run
-
-3. Frontend Setup
-cd frontend
-npm install
-npm start
-
-📦 Deployment (AWS EC2)
-
-Build Spring Boot jar
-
-Upload to EC2 instance
-
-Run using:
-
-java -jar grocery-app.jar
-
-
-Configure Nginx (optional)
-
-Connect to domain
-
-🧪 Testing
-
-Postman collection included (optional)
-
-Unit Tests using JUnit & Mockito (if added)
-
-🤝 Contributions
-
-Contributions are welcome! Feel free to submit PRs or raise issues.
-
-📜 License
-
-This project is released under the MIT License.
